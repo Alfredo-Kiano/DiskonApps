@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    background: -webkit-linear-gradient(right,rgb(13, 215, 13),rgb(50, 174, 251));
+    
+}
+.kehidupan{
+    background-color: aliceblue;
+    color: #333;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 65);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border-bottom: 3px solid #333;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 3PX 7PX;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+#brand{
+    font-weight: 1.5rem;
+    color: #333;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: "Raleway Thin",sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: silver;
+}
+.nav-links{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    padding: none;
+    
+}
+.menu-toggle{
+    display: none;
+    font-size: 24px;background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*ketika titik layar mengecil maka navbar akan digantikan dengan titik 3*/
+@media screen and (max-width: 520px){
+   .nav-links {
+    display: none;
+    width: 100%;
+    position: relative;
+    top: 60px;
+    left: 0;  
+    text-align: center;
+    background-color: #65f8fa;
+   }
+   .nav-links li {
+    padding: 11px;
+    border-top: 1px solid #444;
+    
+   }
+   .menu-toggle {
+    display: block;
+    padding: 12px;
+   }
+   .nav-links.active{
+    display: flex;
+   }
+   
+} 
+.bungkus-abangku{
+    margin: 2rem auto 5.1rem auto;
+    padding: 30px;
+    border: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 65);
+    height: 700px auto;
+    width: auto ;
+    margin: 25px;
+    background: #fff;
+    border-radius: 5px;
+}
+header{
+    text-align: center;
+    padding: 25px;
+}
+.pande-garis-bawah{
+    width: 70%;
+    height: 2px;    
+    margin: 1rem auto;
+    background:-webkit-linear-gradient(right,rgb(13, 215, 13),rgb(50, 174, 251));
+}
+
+.halaman-bonemai-bungkus{
+    padding: 14px;
+}
