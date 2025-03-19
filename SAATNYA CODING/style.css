@@ -1,0 +1,174 @@
+/*Reset Default Style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial',sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    
+}
+
+/*Header*/
+.forum-header{
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.forum-header h1{
+    margin-bottom: 0.5rem;
+}
+.forum-header p{
+    color: silver;
+}
+
+/*Container Form*/
+.container{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/*Tombol Buat Thread*/
+.btn-buat-thread{
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;/*memperbesar button*/
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    
+}
+
+.btn-buat-thread:hover{
+    background-color: #2980b9;
+}
+
+/*Daftar Thread (contoh thread)*/
+.thread-list{
+    background-color: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+.thread-item{
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.thread-item:last-child{
+    border-bottom: none;
+}
+
+.thread-title a{
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.thread-title a:hover{
+    color: #3498db;
+}
+.thread-meta span{
+    margin-right: 1rem;
+}
+
+/*Form Buat Thread*/
+.buat-thread-form{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.buat-thread-form h2{
+    margin-bottom: 1rem;
+}
+
+.buat-thread-form input,
+.buat-thread-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.buat-thread-form button{
+    background-color: #27ae60;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buat-thread-form button:hover{
+    background-color: #219a52;
+}
+
+a{
+    text-decoration: none;
+    color: #fbfbfb;
+}
+a:hover{
+    color: silver;
+}
+/*Desain Navbar*/
+.navbar{
+    padding: 1rem 0;
+    background:  #2c3e50;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    
+}
+.brand{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: "Raleway Thin",sans-serif;
+}/*Selesai*/
+
+
+/*Bagian Chats*/
+.groups-title{
+    padding: 3px;
+    background-color: #27ae60;
+    border-radius: 4px;
+}
+/*underline hijo*/
+.groups-bottom{  
+    
+    height: 30px;
+    border-radius: 3px;
+}
+
+/*seting tampilan atas seperti foto dan aktif*/
+.groups-bottom img{
+    max-width: 50px;
+    border-radius: 50%;
+    height: 49px;
+    position: relative;
+    justify-content: center;
+    padding: 8px;   
+}

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: "Raleway Thin" sans-serif;
+            background: -webkit-linear-gradient(right, blue, rgb(9, 175, 153));
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+<div id="formKasir">
+  <div id="kasir">
+        <h1>Kasir</h1>
+        <div id="kasir-title"></div>
+        <div class="kasir-container">
+            <label>Nama Barang: </label>
+            <input type="text" id="namaBarang" class="form-content" required>
+            <div class="form-border"></div>
+
+            <label>Harga Barang: </label>
+            <input type="number" id="hargaBarang" class="form-content" required>
+            <div class="form-border"></div>
+
+            <label>Jumlah Barang: </label>
+            <input type="number" id="jumlahBarang" class="form-content" required>
+            <div class="form-border"></div>
+
+            <label>Diskon (%): </label>
+            <input type="number" id="diskon" class="form-content" required>
+            <div class="form-border"></div>
+            <div class="button-click" id="tombolContainer">
+                <button onclick="hitungTotal()">Hitung Total</button>
+                <button onclick="simpanKeDatabase()"><a href="index.html" id="simpan">Simpan</a></button>
+                <h3>Total Harga: <span id="totalHarga">0</span></h3>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        function hitungTotal() {
+            let harga = parseFloat(document.getElementById('hargaBarang').value) || 0;
+            let jumlah = parseInt(document.getElementById('jumlahBarang').value) || 0;
+            let diskon = parseFloat(document.getElementById('diskon').value) || 0;
+
+            let subtotal = harga * jumlah;
+            let potongan = subtotal * (diskon / 100);
+            let total = subtotal - potongan;
+
+            document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString('id-ID');
+            
+
+            if (!harga || !jumlah || !diskon) {
+                alert("Upss ada kolom yang belum diisi!");
+
+            }return;
+            
+            //mengubah tomboll hitung total menjadi tombol keaadaan awal
+            let tombolContainer = document.getElementById('tombol-container');
+            tombolContainer.innerHTML = `<button type="button" onclick="simpanKeDatabase()" >Beli</button>
+            <button type="button" onclick="resetForm()" >Batal</button> `;
+        }
+
+        document.getElementById("formKasir").addEventListener("submit", function(event){
+            event.preventDefault();
+            simpanKeDatabase();
+        });
+
+        //fungsi untuk mereset form da tombol ke keadaan awal
+        function resetForm(){
+            document.getElementById('formKasir').reset();
+            document.getElementById('totalHarga').innerText = 'Rp 0'
+
+            let tombolContainer = document.getElementById('tombol-container');
+            tombolContainer.innerHTML = `<button onclick="hitungTotal()">Hitung Total</button>`;
+        }
+
+        function simpanKeDatabase(){
+            let harga =parseFloat(document.getElementById('hargaBarang').value);
+            let jumlah =parseInt(document.getElementById('jumlahBarang').value);
+            let diskon =parseFloat(document.getElementById('diskon').value);
+
+            if(!harga || !jumlah || !diskon) {
+                alert("Apa yang disimpan?")
+         
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>

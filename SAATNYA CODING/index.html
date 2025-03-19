@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!--Menu bar-->
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">Ginime</a>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#chats">Chats</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Header-->
+    <header class="forum-header">
+        <h1>Forum Komunitas</h1>
+        <p>Berdiskusi Dengan Santuy</p>
+    </header>
+
+    <!--Daftar Thread-->
+    <div class="container">
+        <!--TOmbol buat thread-->
+        <a href="#buat-thread" class="btn-buat-thread">+ Buat Thread Baru</a>
+
+        <!--contoh thread-->
+        <div class="thread-list">
+            <!--thread 1-->
+            <div class="thread-item">
+                <h3 class="thread-title"><a href="#">Nia hi Rahul g lawa!</a></h3>
+                <div class="thread-meta">
+                    <span class="author">Oleh: Alfredo Kiano</span>
+                    <span class="replies">12 Balasan</span>
+                    <span class="last-post">Terakhir: 5j lalu</span>
+                </div>
+            </div>
+            <!--thread 2-->
+            <div class="thread-item">
+                <h3 class="thread-title"><a href="#">Rekomendasi buku untuk UI/UX</a></h3>
+                <div class="thread-meta">
+                    <span class="author">Oleh: Delly</span>
+                    <span class="replies">3 Balasan</span>
+                    <span class="last-post">Terakhir: 1 menit lalu</span>
+                </div>
+            </div>
+            <div class="thread-item">
+                <h3 class="thread-title"><a href="#">Teman-teman cala manga koe ita hi Emad tio bo</a></h3>
+                <div class="thread-meta">
+                    <span class="author">Oleh: Butek APK</span>
+                    <span class="replies">0 Balasan</span>
+                    <span class="last-post">Terakhir: 1d lalu</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Form Buat Thread (Pop-Up)-->
+    <div id="buat-thread" class="buat-thread-form">
+        <h2>Buat Thread Baru</h2>
+        <form>
+            <input type="text" placeholder="Judul Thread" required>
+            <textarea placeholder="Isi Pesan..." rows="5" required></textarea>
+            <button type="submit">Posting Thread</button>
+        </form>
+    </div>
+
+    <!--Bagian Chat-->
+    <div class="buat-thread-form" id="chats">
+        <h3>Komunitas Anda</h3>
+        <div class="groups-title"></div>
+        
+        <div class="groups-bottom">
+            <img src="groups.png" alt="Group Anda">
+            <h4>Info PKH bulan 12</h4>
+            <p>aktif 3j lalu</p>
+        </div>
+    </div>
+    
+</body>
+</html>
